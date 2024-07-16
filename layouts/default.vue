@@ -1,13 +1,21 @@
 <template>
-  <Header />
-  <slot />
-  <Footer />
+  <div class="layout">
+    <Header />
+    <slot />
+    <Footer />
+  </div>
 </template>
 <script lang="ts" setup>
-  import Header from "./header.vue";
-  import Footer from "./footer.vue";
+  import Header from "~/components/common/header.vue";
+  import Footer from "~/components/common/footer.vue";
 </script>
 <style lang="scss">
+  .layout {
+    max-width: 600px;
+    margin: 0 auto;
+    border-left: 1px solid rgba(138, 138, 138, 0.3);
+    border-right: 1px solid rgba(138, 138, 138, 0.3);
+  }
   .header__layout {
     #main__header {
       width: 100%;
