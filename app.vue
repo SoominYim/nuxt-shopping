@@ -1,7 +1,11 @@
 <template>
-  <NuxtLayout>
-    <NuxtPage />
-  </NuxtLayout>
+  <v-app>
+    <NuxtLayout>
+      <div class="main">
+        <NuxtPage />
+      </div>
+    </NuxtLayout>
+  </v-app>
 </template>
 
 <style>
@@ -13,5 +17,8 @@
 
     height: auto;
     margin: 0 auto;
+  }
+  .main {
+    min-height: 900px;
   }
 </style>

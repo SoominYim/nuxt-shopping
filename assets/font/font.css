@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "PrR";
+  src: url(./Pretendard-Regular.woff) format("woff");
+}
+
+@font-face {
+  font-family: "PrB";
+  src: url(./Pretendard-Bold.woff) format("woff");
+}
+
+@font-face {
+  font-family: "PrSB";
+  src: url(./Pretendard-SemiBold.woff) format("woff");
+}
+
+@font-face {
+  font-family: "PrM";
+  src: url(./Pretendard-Medium.woff) format("woff");
+}

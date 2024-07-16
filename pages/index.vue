@@ -1,5 +1,9 @@
 <template lang="">
-  <div></div>
+  <div>asdsad</div>
 </template>
 <script lang="ts" setup></script>
-<style lang=""></style>
+<style lang="scss">
+  main {
+    background: yellow;
+  }
+</style>

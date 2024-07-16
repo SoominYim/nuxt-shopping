@@ -108,7 +108,7 @@ section {
 }
 body {
   line-height: 1;
-  font-family: Pretendard, AppleSDGothicNeo, "Apple SD Gothic Neo", "Apple SD 산돌고딕 Neo", sans-serif;
+  font-family: "PrSB", AppleSDGothicNeo, "Apple SD Gothic Neo", "Apple SD 산돌고딕 Neo", sans-serif;
   font-size: 14px;
   color: black;
   min-height: 100%;
@@ -141,4 +141,8 @@ button {
   padding: 0;
   overflow: visible;
   cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: #000;
 }
