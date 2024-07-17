@@ -48,16 +48,18 @@
             stroke="white"
             stroke-miterlimit="10"
             stroke-linejoin="round"
-          ></path></svg
-        >카테고리
+          ></path>
+        </svg>
+        카테고리
       </NuxtLink>
       <NuxtLink to="/">
         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 30 30" fill="none">
-          <path d="M15 16V26M15 4.5L5 12.0698V26H25V12.314L15 4.5Z" stroke="white"></path></svg
-        >홈
+          <path d="M15 16V26M15 4.5L5 12.0698V26H25V12.314L15 4.5Z" stroke="white"></path>
+        </svg>
+        홈
       </NuxtLink>
-      <NuxtLink to="/"
-        ><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 30 30" fill="none">
+      <NuxtLink to="/">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 30 30" fill="none">
           <path
             d="M15 11.9999C17.2091 11.9999 19 10.2091 19 7.99996C19 5.79084 17.2091 4 15 4C12.7909 4 11 5.79084 11 7.99996C11 10.2091 12.7909 11.9999 15 11.9999Z"
             stroke="white"
@@ -69,6 +71,7 @@
     </nav>
   </div>
 </template>
+
 <script lang="ts" setup>
   const activeIndex: any = ref(null);
 

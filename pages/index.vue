@@ -1,8 +1,11 @@
-<template lang="">
-  <headerNav />
-  <div>바디</div>
-</template>
-<script lang="ts" setup>
-  import headerNav from "~/components/common/headerNav.vue";
+<template lang=""></template>
+<script setup>
+  import { useRouter } from "vue-router";
+  import { onMounted } from "vue";
+
+  const router = useRouter();
+
+  onMounted(() => {
+    router.replace("/main");
+  });
 </script>
-<style lang="scss"></style>

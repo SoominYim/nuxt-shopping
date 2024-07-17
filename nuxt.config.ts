@@ -5,7 +5,6 @@ export default defineNuxtConfig({
   devServer: {
     port: 4000,
   },
-
   modules: ["@pinia/nuxt"],
 
   compatibilityDate: "2024-07-15",
