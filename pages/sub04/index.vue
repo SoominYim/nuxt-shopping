@@ -1,6 +1,6 @@
 <template lang="">
   <headerNav />
-  <div>바디</div>
+  <div>서브04</div>
 </template>
 <script lang="ts" setup>
   import headerNav from "~/components/common/headerNav.vue";
