@@ -1,4 +1,5 @@
 <template>
+  <Header />
   <div id="nav__header">
     <nav class="main__nav">
       <NuxtLink
@@ -19,6 +20,7 @@
 </template>
 
 <script setup lang="ts">
+  import Header from "~/components/common/header.vue";
   import { useMain_nav } from "~/store/useMain_nav";
   import { useRoute } from "vue-router";
 
