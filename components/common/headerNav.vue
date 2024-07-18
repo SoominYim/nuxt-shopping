@@ -24,7 +24,6 @@
 
   const route = useRoute();
 
-  console.log(route.path);
   /* 페이지 추가 루트
     ~/data/mainMenu.js
   */
