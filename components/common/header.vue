@@ -2,7 +2,7 @@
   <div class="header__layout">
     <header id="main__header">
       <div class="notice__wrap">
-        <button class="main__notice">
+        <NuxtLink class="main__notice">
           <span>알림</span
           ><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
             <path
@@ -10,13 +10,13 @@
               stroke="black"
             ></path>
           </svg>
-        </button>
+        </NuxtLink>
       </div>
       <div class="logo__wrap">
         <span class="main__logo">로고</span>
       </div>
       <div class="sub__wrap">
-        <button class="main__search">
+        <NuxtLink class="main__search" to="/search">
           <span>검색</span
           ><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
             <path
@@ -25,8 +25,8 @@
               stroke-linejoin="round"
             ></path>
           </svg>
-        </button>
-        <button class="main__cart">
+        </NuxtLink>
+        <NuxtLink class="main__cart" to="/cart">
           <span>장바구니</span
           ><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
             <path
@@ -34,7 +34,7 @@
               stroke="black"
             ></path>
           </svg>
-        </button>
+        </NuxtLink>
       </div>
     </header>
   </div>
@@ -57,7 +57,7 @@
       align-items: center;
       flex-basis: 80px;
       flex-shrink: 0;
-      button {
+      a {
         width: 40px;
         span {
           display: none;
