@@ -1,5 +1,4 @@
 <template>
-  <Header />
   <div id="nav__header">
     <nav class="main__nav">
       <NuxtLink

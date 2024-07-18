@@ -1,5 +1,5 @@
 <template lang="">
-  <div>디테일</div>
+  <div>마이페이지</div>
 </template>
 <script lang="ts" setup></script>
 <style lang="scss"></style>

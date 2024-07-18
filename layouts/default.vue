@@ -1,10 +1,12 @@
 <template>
   <div class="layout">
+    <Header />
     <slot />
     <Footer />
   </div>
 </template>
 <script lang="ts" setup>
+  import Header from "~/components/common/header.vue";
   import Footer from "~/components/common/footer.vue";
 </script>
 <style lang="scss">
