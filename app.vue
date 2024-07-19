@@ -15,6 +15,6 @@
     margin: 0 auto;
   }
   .main {
-    min-height: 900px;
+    min-height: 90vh;
   }
 </style>

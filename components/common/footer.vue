@@ -1,5 +1,8 @@
 <script lang="ts" setup>
   import $footerText from "~/data/footerText";
+  import { useRoute } from "vue-router";
+
+  const route = useRoute();
   const activeIndex: any = ref(null);
 
   const footerText = ref($footerText);
@@ -14,7 +17,7 @@
 
 <template>
   <div class="footer__layout">
-    <footer id="main__footer">
+    <footer id="main__footer" v-if="route.path !== '/auth/login'">
       <ul>
         <li v-for="(v, i) in footerText">
           <button @click="footerActive(i)">

@@ -58,6 +58,7 @@
   .header__layout {
     top: 0;
     background-color: #fff;
+    z-index: 999;
     #main__header {
       width: 100%;
       height: 50px;
