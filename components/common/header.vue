@@ -12,8 +12,9 @@
           </svg>
         </NuxtLink>
       </div>
-      <div class="logo__wrap">
-        <span class="main__logo">로고</span>
+      <div class="main__icon">
+        <span class="icon__logo" v-if="route.path === '/main'">로고</span>
+        <span class="icon__login" v-if="route.path === '/auth/login'">로그인</span>
       </div>
       <div class="sub__wrap">
         <NuxtLink class="main__search" to="/search" v-if="route.path === '/mypage'">
