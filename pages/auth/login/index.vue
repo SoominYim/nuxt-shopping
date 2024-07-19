@@ -9,14 +9,16 @@
       <div class="underline"></div>
     </button>
   </div>
-  <div class="login__layout">
-    <div class="member" v-if="isMember">
-      <input type="text" placeholder="아이디" />
-      <input type="password" placeholder="비밀번호" />
-    </div>
-    <div class="notMember" v-else>
-      <label>주문자명</label><input type="text" /> <label>주문번호</label><input type="text" />
-    </div>
+  <div class="login__form">
+    <form class="member__wrap">
+      <div class="member" v-if="isMember">
+        <input type="text" placeholder="아이디" />
+        <input type="password" autoComplete="off" placeholder="비밀번호" />
+      </div>
+      <div class="notMember" v-else>
+        <label>주문자명</label><input type="text" /> <label>주문번호</label><input type="text" />
+      </div>
+    </form>
   </div>
 </template>
 <script lang="ts" setup>
@@ -58,7 +60,7 @@
       }
     }
   }
-  .login__layout {
+  .login__form {
     margin: 0 auto;
     min-width: 280px;
     width: 60%;
