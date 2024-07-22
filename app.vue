@@ -8,6 +8,9 @@
 
 <style>
   @import url("@/assets/style/reset.scss");
+  body {
+    overflow-y: scroll;
+  }
   #__nuxt {
     max-width: 600px;
 

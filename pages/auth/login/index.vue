@@ -28,7 +28,7 @@
         </div>
       </div>
     </form>
-    <NuxtLink class="login__kakao" to="./kakao/callback.vue">
+    <NuxtLink class="login__kakao" to="/auth/login/kakao/callback">
       <svg
         class="login-button__item__logo"
         fill="none"

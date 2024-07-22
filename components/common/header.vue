@@ -1,5 +1,5 @@
 <template>
-  <div class="header__layout" :style="{ position: route.path === '/' ? 'relative' : 'sticky' }">
+  <div class="header__layout" :style="{ position: route.path === '/main' ? 'relative' : 'sticky' }">
     <header id="main__header">
       <div class="notice__wrap">
         <NuxtLink class="main__notice">
