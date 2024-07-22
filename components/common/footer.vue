@@ -17,7 +17,7 @@
 
 <template>
   <div class="footer__layout">
-    <footer id="main__footer" v-if="route.path !== '/auth/login'">
+    <footer id="main__footer" v-if="route.path !== '/auth/login' && route.path !== '/auth/login/'">
       <ul>
         <li v-for="(v, i) in footerText">
           <button @click="footerActive(i)">

@@ -47,6 +47,8 @@
       </svg>
       카카오 로그인
     </NuxtLink>
+
+    <NuxtLink class="btn__signup" v-if="isMember" to="/auth/signup">회원가입</NuxtLink>
     <form class="notMember__wrap" v-if="!isMember">
       <div class="notMember">
         <label>주문자명</label><input type="text" /> <label>주문번호</label><input type="text" />
@@ -262,6 +264,21 @@
         margin-right: -4px;
         vertical-align: top;
       }
+    }
+    .btn__signup {
+      background: #fff;
+      color: #000;
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      height: 50px;
+      padding: 14px 16px 15px;
+      border: 1px solid #000;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 14px;
+      text-align: center;
+      line-height: 20px;
     }
   }
 </style>
