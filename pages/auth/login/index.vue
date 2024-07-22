@@ -28,7 +28,7 @@
         </div>
       </div>
     </form>
-    <NuxtLink class="login__kakao" to="/auth/login/kakao/callback">
+    <NuxtLink class="login__kakao" v-if="isMember" to="/auth/login/kakao/callback">
       <svg
         class="login-button__item__logo"
         fill="none"
@@ -74,9 +74,22 @@
     };
   }
 
-  onMounted(() => {
-    localStorage.getItem("autoLogin") !== "true" ? (isAutoLogin.value = false) : (isAutoLogin.value = true);
-  });
+  // const kakaoLogin = () => {
+  //   let restApiKey = "ee308faac3d51a8a0596d8ff752bc628";
+  //   let redirectUrl = "http://localhost:4000/";
+  //   const url = new URL(
+  //     "https://kauth.kakao.com/oauth/authorize?response_type=code&client_id=" +
+  //       restApiKey +
+  //       "&redirect_uri=" +
+  //       redirectUrl
+  //   );
+
+  //   window.location = url;
+  // };
+
+  // onMounted(() => {
+  //   localStorage.getItem("autoLogin") !== "true" ? (isAutoLogin.value = false) : (isAutoLogin.value = true);
+  // });
 
   function navActive(isMemberStatus: boolean) {
     isMember.value = isMemberStatus;
