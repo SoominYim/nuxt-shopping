@@ -36,8 +36,10 @@
   </div>
 </template>
 <script lang="ts" setup>
+  import { useAuth } from "~/store/useAuth";
   const isMember = ref<Boolean>(true);
-  const isAutoLogin = ref<Boolean>();
+
+  const { isAutoLogin } = storeToRefs(useAuth());
 
   let isAutoActive;
 
@@ -54,8 +56,9 @@
   }
 
   onMounted(() => {
-    localStorage.getItem("autoLogin") !== "true" ? (isActive.value = false) : (isActive.value = true);
+    localStorage.getItem("autoLogin") !== "true" ? (isAutoLogin.value = false) : (isAutoLogin.value = true);
   });
+
   function navActive(isMemberStatus: boolean) {
     isMember.value = isMemberStatus;
   }
