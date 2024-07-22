@@ -10,12 +10,26 @@
     </button>
   </div>
   <div class="login__form">
-    <form class="member__wrap">
-      <div class="member" v-if="isMember">
+    <form class="member__wrap" v-if="isMember">
+      <div class="member__input">
         <input type="text" placeholder="아이디" />
         <input type="password" autoComplete="off" placeholder="비밀번호" />
       </div>
-      <div class="notMember" v-else>
+      <button class="btn__login">로그인</button>
+
+      <div class="member__util">
+        <div class="autoLogin__wrap">
+          <label>자동로그인</label>
+        </div>
+        <div class="findLogin__wrap">
+          <NuxtLink to="/"> 아이디 찾기</NuxtLink>
+          &nbsp;|&nbsp;
+          <NuxtLink to="/"> 비밀번호 찾기</NuxtLink>
+        </div>
+      </div>
+    </form>
+    <form class="notMember__wrap" v-if="!isMember">
+      <div class="notMember">
         <label>주문자명</label><input type="text" /> <label>주문번호</label><input type="text" />
       </div>
     </form>
@@ -61,13 +75,40 @@
     }
   }
   .login__form {
+    width: 100%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     min-width: 280px;
     width: 60%;
-    div:nth-child(1),
-    div:nth-child(2) {
+    .member__wrap,
+    .notMember__wrap {
       display: flex;
       flex-direction: column;
+      margin-top: 20px;
+      gap: 20px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .member__wrap {
+      button {
+        background: #000;
+        color: #fff;
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        height: 50px;
+        padding: 14px 16px 15px;
+        border: 1px solid #000;
+        border-radius: 4px;
+        font-weight: 700;
+        font-size: 14px;
+      }
     }
 
     input {
@@ -91,6 +132,49 @@
     }
     input:focus {
       border: 1px solid #aaa;
+    }
+    .member__util {
+      display: flex;
+      justify-content: space-between;
+      .autoLogin__wrap {
+        label {
+          display: inline-flex;
+          position: relative;
+          width: auto;
+          min-height: 20px;
+          padding: 0 0 0 26px;
+          font-size: 14px;
+          color: inherit;
+          text-align: left;
+          white-space: normal;
+          cursor: pointer;
+          &::before {
+            position: absolute;
+            top: -3px;
+            bottom: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ccc;
+            border-radius: 100%;
+            background-color: #f1f1f1;
+            content: "";
+          }
+        }
+      }
+
+      .findLogin__wrap {
+        display: flex;
+        flex-direction: row;
+        color: #aaa;
+        * {
+          display: inline-block;
+          position: relative;
+          font-size: 14px;
+          line-height: 16px;
+          color: #aaa;
+        }
+      }
     }
   }
 </style>
