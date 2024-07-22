@@ -89,9 +89,9 @@
   //   window.location = url;
   // };
 
-  // onMounted(() => {
-  //   localStorage.getItem("autoLogin") !== "true" ? (isAutoLogin.value = false) : (isAutoLogin.value = true);
-  // });
+  onMounted(() => {
+    localStorage.getItem("autoLogin") !== "true" ? (isAutoLogin.value = false) : (isAutoLogin.value = true);
+  });
 
   function navActive(isMemberStatus: boolean) {
     isMember.value = isMemberStatus;
