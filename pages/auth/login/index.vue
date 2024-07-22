@@ -19,7 +19,7 @@
 
       <div class="member__util">
         <div class="autoLogin__wrap">
-          <label>자동로그인</label>
+          <label @click="isAutoActive" :class="{ active: isAutoLogin }">자동로그인</label>
         </div>
         <div class="findLogin__wrap">
           <NuxtLink to="/"> 아이디 찾기</NuxtLink>
@@ -37,7 +37,25 @@
 </template>
 <script lang="ts" setup>
   const isMember = ref<Boolean>(true);
+  const isAutoLogin = ref<Boolean>();
 
+  let isAutoActive;
+
+  if (process.client) {
+    isAutoActive = function () {
+      if (localStorage.getItem("autoLogin") !== "true") {
+        localStorage.setItem("autoLogin", "true");
+        isAutoLogin.value = true;
+      } else {
+        localStorage.setItem("autoLogin", "false");
+        isAutoLogin.value = false;
+      }
+    };
+  }
+
+  onMounted(() => {
+    localStorage.getItem("autoLogin") !== "true" ? (isActive.value = false) : (isActive.value = true);
+  });
   function navActive(isMemberStatus: boolean) {
     isMember.value = isMemberStatus;
   }
@@ -160,6 +178,18 @@
             background-color: #f1f1f1;
             content: "";
           }
+          &.active::after {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 3px;
+            width: 16px;
+            height: 16px;
+            border-radius: 100%;
+            border-color: #0078ff;
+            background-color: #0078ff;
+            content: "";
+          }
         }
       }
 
@@ -172,7 +202,7 @@
           position: relative;
           font-size: 14px;
           line-height: 16px;
-          color: #aaa;
+          color: #aaaaaa;
         }
       }
     }
