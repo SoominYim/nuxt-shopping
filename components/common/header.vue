@@ -13,7 +13,7 @@
         </NuxtLink>
       </div>
       <div class="main__icon">
-        <span class="icon__logo" v-if="route.path === '/main'">로고</span>
+        <span class="icon__logo" v-if="isMain()">로고</span>
         <span class="icon__login" v-if="route.path === '/auth/login'">로그인</span>
       </div>
       <div class="sub__wrap">
@@ -53,6 +53,7 @@
   import { useRoute } from "vue-router";
 
   const route = useRoute();
+  const isMain = () => route.path.includes("main");
 </script>
 <style lang="scss">
   .header__layout {
